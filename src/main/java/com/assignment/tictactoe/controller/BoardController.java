@@ -41,11 +41,12 @@ public class BoardController implements BoardUI {
             Integer columnIndex = GridPane.getColumnIndex(clickedImageView);
 
             humanPlayer.move(rowIndex, columnIndex);
+            clickedImageView.disableProperty().unbind();
         }
     }
 
     @Override
-    public void update(int col, int row, boolean isHuman) {
+    public void update(int row, int col, boolean isHuman) {
         for (var node : gridPane.getChildren()) {
             Integer rowIndex = GridPane.getRowIndex(node);
             Integer columnIndex = GridPane.getColumnIndex(node);

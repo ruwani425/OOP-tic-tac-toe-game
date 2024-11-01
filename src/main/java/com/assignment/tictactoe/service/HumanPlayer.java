@@ -9,7 +9,7 @@ public class HumanPlayer extends Player {
     public void move(int row, int col) {
         if (board.isLegalMove(row, col)) {
             board.updateMove(row, col, Piece.X);
-            board.getBoardUI().update(col,row,true);
+            board.getBoardUI().update(row,col,true);
         }
         Winner winner = board.checkWinner();
         if (winner==null){

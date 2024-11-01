@@ -1,5 +1,7 @@
 package com.assignment.tictactoe.service;
 
+import java.util.Arrays;
+
 public class BoardImpl implements Board {
 
     public Piece[][] pieces;
@@ -65,10 +67,8 @@ public class BoardImpl implements Board {
 
     @Override
     public void printBoard() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.println(pieces[i][j]);
-            }
+        for (Piece[] row : pieces) {
+            System.out.println(Arrays.toString(row));
         }
     }
 }
