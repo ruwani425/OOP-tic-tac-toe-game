@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="386.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.tictactoe.controller.BoardController">
+   <children>
+      <GridPane fx:id="gridPane" gridLinesVisible="true" layoutX="50.0" layoutY="50.0" prefHeight="270.0" prefWidth="376.0" style="-fx-background-color: #17c0eb;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="126.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ImageView fitHeight="86.0" fitWidth="123.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <ImageView fitHeight="87.0" fitWidth="126.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+            <ImageView fitHeight="87.0" fitWidth="126.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <ImageView fitHeight="88.0" fitWidth="126.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fitHeight="87.0" fitWidth="126.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+            <ImageView fitHeight="88.0" fitWidth="128.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <ImageView fitHeight="87.0" fitWidth="124.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fitHeight="90.0" fitWidth="127.0" onMouseClicked="#onCellClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <JFXButton id="bevel" fx:id="restartGameBtn" layoutX="185.0" layoutY="337.0" onAction="#gameReStartOnAction" prefHeight="30.0" prefWidth="130.0" stylesheets="@../styles/buttonStyle.css" text="Restart" />
+      <ImageView fitHeight="20.0" fitWidth="27.0" layoutX="259.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert/icon-restart.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
